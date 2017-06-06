@@ -23,7 +23,7 @@ def replace_string(inputfile,outputfile,dictfile):
     filemanager.replace_string("test\\input.txt","test\\output.txt","test\\dictionary.txt")
     python main\filemanager.py test\input.txt test\output.txt test\dictionary.txt
     '''
-    pdb.set_trace()
+    #pdb.set_trace()
     new_dict = read_dictionaryfile(dictfile)
     with open(inputfile, "rt") as fin:
         with open(outputfile, "wt") as fout:
