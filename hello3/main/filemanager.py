@@ -7,7 +7,7 @@ import pdb
 def read_dictionaryfile(f):
     '''
     read a file to a dictionary
-    filemanager.read_dictionaryfile("..\\test\\dictionary.txt")
+    filemanager.read_dictionaryfile("test\\dictionary.txt")
     '''
     new_dict = {}
     with open(f, 'rt') as fdict:
@@ -20,7 +20,8 @@ def read_dictionaryfile(f):
 def replace_string(inputfile,outputfile,dictfile):
     '''
     repace string
-    filemanager.replace_string("..\\test\\input.txt","..\\test\\output.txt","..\\test\\dictionary.txt")
+    filemanager.replace_string("test\\input.txt","test\\output.txt","test\\dictionary.txt")
+    python main\filemanager.py test\input.txt test\output.txt test\dictionary.txt
     '''
     pdb.set_trace()
     new_dict = read_dictionaryfile(dictfile)
@@ -35,4 +36,7 @@ def replace_string(inputfile,outputfile,dictfile):
                     else:
                         line = newline
                 fout.write(line)
+
+if __name__ == '__main__':
+    replace_string(sys.argv[1], sys.argv[2], sys.argv[3])
 
